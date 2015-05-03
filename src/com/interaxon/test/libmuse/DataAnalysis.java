@@ -25,7 +25,7 @@ public class DataAnalysis
     //Instances isTrainingSet = new Instances("Rel", fvWekaAttributes, 5);
     Instances isTrainingSet = new Instances("Rel", step1(), 10);
     public int classCounter = 0;
-
+    public boolean ready = false;
 
     public void receiveMuseDataPacket(MuseDataPacket p) {
         switch (p.getPacketType()) {
@@ -105,10 +105,11 @@ public class DataAnalysis
         return fwWekaAttributes;
     }
 
-    pubilic Instances step2(FastVector fvWekaAttributes, String classname) {
+    pubilic Instances step2(String classname) {
+        FastVector fvWekaAttributes = step1();
 
         // Set class index
-        isTrainingSet.setClassIndex(classCounter); // means the 4th index
+        this.isTrainingSet.setClassIndex(classCounter); // means the 4th index
 
         // Create the instance
         Instance iExample = new DenseInstance(6);
@@ -126,6 +127,7 @@ public class DataAnalysis
         this.isTrainingSet.add(iExample);
         if (this.classCounter > 9) {
             this.step3();
+            this.ready = true;
         } else{
             this.classCounter++;
         }
