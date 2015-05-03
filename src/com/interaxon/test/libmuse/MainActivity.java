@@ -136,7 +136,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
         @Override
         public void receiveMuseDataPacket(MuseDataPacket p) {
-            analysis.receiveMuseDataPacket(p);
+            DataAnalysis.receiveMuseDataPacket(p);
         }
 
         /*@Override
