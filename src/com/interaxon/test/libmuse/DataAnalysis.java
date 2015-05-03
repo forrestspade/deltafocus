@@ -15,11 +15,16 @@ public class DataAnalysis
     //public DataBuffer accDB = new DataBuffer();
     //public DataBuffer alpRelDB = new DataBuffer();
     //public DataBuffer battDB = new DataBuffer();
-    public DataBuffer alpScorDB = new DataBuffer();
-    public DataBuffer betScorDB = new DataBuffer();
-    public DataBuffer delScorDB = new DataBuffer();
-    public DataBuffer theScorDB = new DataBuffer();
-    public DataBuffer gamScorDB = new DataBuffer();
+    public DataBuffer alpScoreDB = new DataBuffer();
+    public DataBuffer betScoreDB = new DataBuffer();
+    public DataBuffer delScoreDB = new DataBuffer();
+    public DataBuffer theScoreDB = new DataBuffer();
+    public DataBuffer gamScoreDB = new DataBuffer();
+
+    // Create an empty training set
+    //Instances isTrainingSet = new Instances("Rel", fvWekaAttributes, 5);
+    Instances isTrainingSet = new Instances("Rel", step1(), 10);
+
 
     public void receiveMuseDataPacket(MuseDataPacket p) {
         switch (p.getPacketType()) {
@@ -64,13 +69,16 @@ public class DataAnalysis
 
     // TODO: Function to convert data into Instance
     // TODO: Function to combine each sensor Instance into Instances
-    public Instances aggregateInstances() {
+    public FastVector step1() {
         // ArrayList<Double> to some element in fvWekaAttributes.
-        alpScorDB.dataSamples;
+        //alpScorDB.dataSamples;
 
         // Declare two numeric attributes
-        Attribute Attribute1 = new Attribute(“firstNumeric”);
-        Attribute Attribute2 = new Attribute(“secondNumeric”);
+        Attribute alpScoreAttr = new Attribute(“alpScore”);
+        Attribute betSoreAttr = new Attribute(“betScore”);
+        Attribute delScoreAttr = new Attribute(“delScore”);
+        Attribute theScoreAttr = new Attribute(“theScore”);
+        Attribute gamScoreAttr = new Attribute(“gamScore”);
 
         // Declare a nominal attribute along with its values
         /*FastVector fvNominalVal = new FastVector(3);
@@ -81,35 +89,40 @@ public class DataAnalysis
 
         // Declare the class attribute along with its values
         FastVector fvClassVal = new FastVector(2);
-        fvClassVal.addElement(“positive”);
-        fvClassVal.addElement(“negative”);
+        fvClassVal.addElement(“green”);
+        fvClassVal.addElement(“red”);
         Attribute ClassAttribute = new Attribute(“theClass”, fvClassVal);
 
         // Declare the feature vector
-        FastVector fvWekaAttributes = new FastVector(4);
-        fvWekaAttributes.addElement(Attribute1);
-        fvWekaAttributes.addElement(Attribute2);
-        fvWekaAttributes.addElement(Attribute3);
+        FastVector fvWekaAttributes = new FastVector(6);
+        fvWekaAttributes.addElement(alpScoreAttr);
+        fvWekaAttributes.addElement(betScoreAttr);
+        fvWekaAttributes.addElement(delScoreAttr);
+        fvWekaAttributes.addElement(theScoreAttr);
+        fvWekaAttributes.addElement(gamScoreAttr);
         fvWekaAttributes.addElement(ClassAttribute);
+        return fwWekaAttributes;
+    }
+
+    pubilic Instances step2(FastVector fvWekaAttributes, int classIndex) {
+
+        // Set class index
+        isTrainingSet.setClassIndex(classIndex); // means the 4th index
 
         // Create the instance
-        Instance iExample = new DenseInstance(4);
-        iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), 1.0);
-        iExample.setValue((Attribute)fvWekaAttributes.elementAt(1), 0.5);
-        iExample.setValue((Attribute) fvWekaAttributes.elementAt(2), "gray");
-        iExample.setValue((Attribute)fvWekaAttributes.elementAt(3), "positive");
-        return iExample;
+        Instance iExample = new DenseInstance(5);
+        //iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), alpScoreDB.dataSamples.get(alpScoreDB.dataSamples.size-1));
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), (Double) alpScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(1), (Double) betScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(2), (Double) delScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(3), (Double) theScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(4), (Double) gamScoreDB.pop().getValues()[15]);
+        //return iExample;
 
-        // Create an empty training set
-        Instances isTrainingSet = new Instances("Rel", fvWekaAttributes, 10);
-
-        // for each sensor instance
+    // for each sensor instance
         // add the instance
         isTrainingSet.add(iExample);
 
-        // Set class index
-        isTrainingSet.setClassIndex(3);
-        return isTrainingSet;
     }
 
     // TODO: Function to train a classifier
