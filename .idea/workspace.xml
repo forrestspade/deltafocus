@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e94212d0-6a82-4150-9241-8c02bf5ea36a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/Analysis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java" />
+    <list default="true" id="e94212d0-6a82-4150-9241-8c02bf5ea36a" name="Default" comment="Whoops, renaming file.">
+      <change type="MOVED" beforePath="C:\Users\nobody\Documents\deltafocus\src\com\interaxon\test\libmuse\Analysis.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="deltafocus.iws" />
@@ -27,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-132.3793">
+            <state vertical-scroll-proportion="10.456604">
               <caret line="364" column="45" selection-start-line="364" selection-start-column="45" selection-end-line="364" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -44,22 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analysis.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/Analysis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.46448088">
-              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DataBuffer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8275862">
+            <state vertical-scroll-proportion="-17.0">
               <caret line="29" column="38" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -431,7 +417,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430639910960</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added basic Weka information. Still need to get data from buffers into attributes/Instance.">
+      <created>1430688514752</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1430688514752</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -458,7 +450,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16354345" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25340393" sideWeight="0.50596255" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.48214287" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.48214287" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -489,7 +481,8 @@
     <MESSAGE value="Added jFuzzyLogic Android core. We can start using this for fuzzy logic processing on Muse data packets (after we aggregate them). See:&#10;http://android.choosemuse.com/classcom_1_1interaxon_1_1libmuse_1_1_muse_data_listener.html" />
     <MESSAGE value="Another commit, added some files that are probably not important." />
     <MESSAGE value="Added weka for Android to do Machine Learning (naive Bayes) if we choose to go that route instead of OpenCV (SVM).&#10;https://github.com/rjmarsan/Weka-for-Android" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added weka for Android to do Machine Learning (naive Bayes) if we choose to go that route instead of OpenCV (SVM).&#10;https://github.com/rjmarsan/Weka-for-Android" />
+    <MESSAGE value="Added basic Weka information. Still need to get data from buffers into attributes/Instance." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic Weka information. Still need to get data from buffers into attributes/Instance." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -527,24 +520,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-132.3793">
-          <caret line="364" column="45" selection-start-line="364" selection-start-column="45" selection-end-line="364" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
-            <element signature="e#5536#5537#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5674#5675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8275862">
+        <state vertical-scroll-proportion="-17.0">
           <caret line="29" column="38" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -554,12 +532,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/Analysis.java">
+    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.46448088">
-          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state vertical-scroll-proportion="10.456604">
+          <caret line="364" column="45" selection-start-line="364" selection-start-column="45" selection-end-line="364" selection-end-column="45" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#5536#5537#0" expanded="true" />
+            <element signature="e#5617#5618#0" expanded="true" />
+            <element signature="e#5674#5675#0" expanded="true" />
           </folding>
         </state>
       </provider>
