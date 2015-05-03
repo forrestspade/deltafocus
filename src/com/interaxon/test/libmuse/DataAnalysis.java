@@ -2,7 +2,7 @@ package com.interaxon.test.libmuse;
 
 import com.interaxon.libmuse.MuseDataPacket;
 import com.interaxon.libmuse.MuseDataPacketType;
-import com.interaxon.test.limbuse.DataBuffer;
+import com.interaxon.test.libmuse.DataBuffer;
 
 // buildClassifier(Instances instances)
 //
@@ -135,12 +135,12 @@ public class DataAnalysis
 
     // TODO: Function to train a classifier
     // see http://weka.wikispaces.com/Programmatic+Use
-    public String step3(Instances isTrainingSet) {
+    public String step3(){ //Instances isTrainingSet) {
         // Create a naïve bayes classifier
         Classifier cModel = (Classifier)new NaiveBayes();
-        cModel.buildClassifier(isTrainingSet);
+        cModel.buildClassifier(this.isTrainingSet);
 
-        // Test the model
+        // Test the model (OPTIONAL)
         Evaluation eTest = new Evaluation(this.isTrainingSet);
         eTest.evaluateModel(cModel, this.isTestingSet);
 
