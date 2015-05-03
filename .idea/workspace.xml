@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e94212d0-6a82-4150-9241-8c02bf5ea36a" name="Default" comment="Whoops, renaming file.">
-      <change type="MOVED" beforePath="C:\Users\nobody\Documents\deltafocus\src\com\interaxon\test\libmuse\Analysis.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" />
+    <list default="true" id="e94212d0-6a82-4150-9241-8c02bf5ea36a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="deltafocus.iws" />
@@ -25,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.456604">
+            <state vertical-scroll-proportion="-191.10345">
               <caret line="364" column="45" selection-start-line="364" selection-start-column="45" selection-end-line="364" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -42,15 +43,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DataAnalysis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20930232">
+              <caret line="67" column="65" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="DataBuffer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="38" />
+            <state vertical-scroll-proportion="-5.706897">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#537#538#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,9 +80,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java" />
         <option value="$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/interaxon/test/libmuse/Analysis.java" />
+        <option value="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java" />
+        <option value="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" />
       </list>
     </option>
   </component>
@@ -79,9 +91,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="x" value="1" />
+    <option name="y" value="2" />
+    <option name="width" value="964" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -423,7 +435,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430688514752</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Whoops, renaming analysis.java">
+      <created>1430688794839</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1430688794839</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -436,7 +454,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1" y="2" width="964" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -455,7 +473,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25340393" sideWeight="0.49403748" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37057522" sideWeight="0.49403748" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -482,7 +500,8 @@
     <MESSAGE value="Another commit, added some files that are probably not important." />
     <MESSAGE value="Added weka for Android to do Machine Learning (naive Bayes) if we choose to go that route instead of OpenCV (SVM).&#10;https://github.com/rjmarsan/Weka-for-Android" />
     <MESSAGE value="Added basic Weka information. Still need to get data from buffers into attributes/Instance." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic Weka information. Still need to get data from buffers into attributes/Instance." />
+    <MESSAGE value="Whoops, renaming analysis.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Whoops, renaming analysis.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -520,21 +539,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#537#538#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.456604">
+        <state vertical-scroll-proportion="-191.10345">
           <caret line="364" column="45" selection-start-line="364" selection-start-column="45" selection-end-line="364" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -544,6 +551,26 @@
             <element signature="e#5617#5618#0" expanded="true" />
             <element signature="e#5674#5675#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.706897">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20930232">
+          <caret line="67" column="65" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
