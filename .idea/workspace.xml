@@ -28,7 +28,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.034483">
+            <state vertical-scroll-proportion="-5.0">
               <caret line="363" column="45" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -45,8 +45,8 @@
       <file leaf-file-name="DataAnalysis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8812095">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22894168">
+              <caret line="107" column="55" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -458,7 +458,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430690838777</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated the weka code so that it can learn based on scores, softof.">
+      <created>1430692609338</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1430692609338</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -520,7 +526,8 @@
     <MESSAGE value="Whoops, renaming analysis.java" />
     <MESSAGE value="DataBuffer now creates ArrayList that should contain the values, but not tested. TODO: get DataAnalysis to load data into models. Then need to have ability to store 5 normal + 5 stressed Instances for training." />
     <MESSAGE value="Nothing changed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nothing changed." />
+    <MESSAGE value="Updated the weka code so that it can learn based on scores, softof." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the weka code so that it can learn based on scores, softof." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -558,21 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.034483">
-          <caret line="363" column="45" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#5482#5483#0" expanded="true" />
-            <element signature="e#5536#5537#0" expanded="true" />
-            <element signature="e#5617#5618#0" expanded="true" />
-            <element signature="e#5674#5675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1724138">
@@ -585,10 +577,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="363" column="45" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#5536#5537#0" expanded="true" />
+            <element signature="e#5617#5618#0" expanded="true" />
+            <element signature="e#5674#5675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8812095">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22894168">
+          <caret line="107" column="55" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
           <folding />
         </state>
       </provider>

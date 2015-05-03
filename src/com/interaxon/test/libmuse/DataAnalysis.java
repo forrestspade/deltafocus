@@ -24,6 +24,7 @@ public class DataAnalysis
     // Create an empty training set
     //Instances isTrainingSet = new Instances("Rel", fvWekaAttributes, 5);
     Instances isTrainingSet = new Instances("Rel", step1(), 10);
+    public int classCounter = 0;
 
 
     public void receiveMuseDataPacket(MuseDataPacket p) {
@@ -104,40 +105,40 @@ public class DataAnalysis
         return fwWekaAttributes;
     }
 
-    pubilic Instances step2(FastVector fvWekaAttributes, int classIndex) {
+    pubilic Instances step2(FastVector fvWekaAttributes, String classname) {
 
         // Set class index
-        isTrainingSet.setClassIndex(classIndex); // means the 4th index
+        isTrainingSet.setClassIndex(classCounter); // means the 4th index
 
         // Create the instance
-        Instance iExample = new DenseInstance(5);
+        Instance iExample = new DenseInstance(6);
         //iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), alpScoreDB.dataSamples.get(alpScoreDB.dataSamples.size-1));
         iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), (Double) alpScoreDB.pop().getValues()[15]);
         iExample.setValue((Attribute)fvWekaAttributes.elementAt(1), (Double) betScoreDB.pop().getValues()[15]);
         iExample.setValue((Attribute)fvWekaAttributes.elementAt(2), (Double) delScoreDB.pop().getValues()[15]);
         iExample.setValue((Attribute)fvWekaAttributes.elementAt(3), (Double) theScoreDB.pop().getValues()[15]);
         iExample.setValue((Attribute)fvWekaAttributes.elementAt(4), (Double) gamScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(5), classname);
         //return iExample;
 
     // for each sensor instance
         // add the instance
-        isTrainingSet.add(iExample);
+        this.isTrainingSet.add(iExample);
+        this.classCounter++;
 
     }
+
 
     // TODO: Function to train a classifier
     // see http://weka.wikispaces.com/Programmatic+Use
-    public void trainClassifier1(Instances isTrainingSet) {
+    public String step3(Instances isTrainingSet) {
         // Create a naïve bayes classifier
         Classifier cModel = (Classifier)new NaiveBayes();
         cModel.buildClassifier(isTrainingSet);
-    }
 
-    // TODO:
-    public void testClassifier1() {
         // Test the model
-        Evaluation eTest = new Evaluation(isTrainingSet);
-        eTest.evaluateModel(cModel, isTestingSet);
+        Evaluation eTest = new Evaluation(this.isTrainingSet);
+        eTest.evaluateModel(cModel, this.isTestingSet);
 
         // Print the result à la Weka explorer:
         String strSummary = eTest.toSummaryString();
@@ -145,17 +146,30 @@ public class DataAnalysis
 
         // Get the confusion matrix
         double[][] cmMatrix = eTest.confusionMatrix();
+        return strSummary;
     }
 
     // TODO
-    public void useClassifier1() {
+    public Double step4amountOfAnger() {
         // Specify that the instance belong to the training set
         // in order to inherit from the set description
+
+        // Create the instance
+        Instance iUse = new DenseInstance(6);
+        //iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), alpScoreDB.dataSamples.get(alpScoreDB.dataSamples.size-1));
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(0), (Double) alpScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(1), (Double) betScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(2), (Double) delScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(3), (Double) theScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(4), (Double) gamScoreDB.pop().getValues()[15]);
+        iExample.setValue((Attribute)fvWekaAttributes.elementAt(5), classname);
+
         iUse.setDataset(isTrainingSet);
 
         // Get the likelihood of each classes
         // fDistribution[0] is the probability of being “positive”
         // fDistribution[1] is the probability of being “negative”
         double[] fDistribution = cModel.distributionForInstance(iUse);
+        return fDistribution[1]-fDistribution[0];
     }
 }
