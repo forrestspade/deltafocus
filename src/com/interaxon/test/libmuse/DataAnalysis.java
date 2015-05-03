@@ -124,7 +124,11 @@ public class DataAnalysis
     // for each sensor instance
         // add the instance
         this.isTrainingSet.add(iExample);
-        this.classCounter++;
+        if (this.classCounter > 9) {
+            this.step3();
+        } else{
+            this.classCounter++;
+        }
 
     }
 
