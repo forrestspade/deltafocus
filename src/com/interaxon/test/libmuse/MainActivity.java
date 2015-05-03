@@ -39,6 +39,8 @@ import com.interaxon.libmuse.MuseManager;
 import com.interaxon.libmuse.MusePreset;
 import com.interaxon.libmuse.MuseVersion;
 
+import com.interaxon.test.libmuse.*;
+
 
 /**
  * In this simple example MainActivity implements 2 MuseHeadband listeners
@@ -134,6 +136,11 @@ public class MainActivity extends Activity implements OnClickListener {
 
         @Override
         public void receiveMuseDataPacket(MuseDataPacket p) {
+            analysis.receiveMuseDataPacket(p);
+        }
+
+        /*@Override
+        public void receiveMuseDataPacket(MuseDataPacket p) {
             switch (p.getPacketType()) {
                 case EEG:
                     updateEeg(p.getValues());
@@ -154,7 +161,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 default:
                     break;
             }
-        }
+        }*/
+
 
         @Override
         public void receiveMuseArtifactPacket(MuseArtifactPacket p) {
@@ -342,16 +350,26 @@ public class MainActivity extends Activity implements OnClickListener {
 
     private void configure_library() {
         muse.registerConnectionListener(connectionListener);
-        muse.registerDataListener(dataListener,
+        /*muse.registerDataListener(dataListener,
                                   MuseDataPacketType.ACCELEROMETER);
         muse.registerDataListener(dataListener,
                                   MuseDataPacketType.EEG);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.ALPHA_RELATIVE);
-        muse.registerDataListener(dataListener,
+                                  MuseDataPacketType.ALPHA_RELATIVE);*/
+        /*muse.registerDataListener(dataListener,
                                   MuseDataPacketType.ARTIFACTS);
         muse.registerDataListener(dataListener,
-                                  MuseDataPacketType.BATTERY);
+                                  MuseDataPacketType.BATTERY);*/
+        muse.registerDataListener(dataListener,
+                MuseDataPacketType.ALPHA_SCORE);
+        muse.registerDataListener(dataListener,
+                MuseDataPacketType.BETA_SCORE);
+        muse.registerDataListener(dataListener,
+                MuseDataPacketType.DELTA_SCORE);
+        muse.registerDataListener(dataListener,
+                MuseDataPacketType.THETA_SCORE);
+        muse.registerDataListener(dataListener,
+                MuseDataPacketType.GAMMA_SCORE);
         muse.setPreset(MusePreset.PRESET_14);
         muse.enableDataTransmission(dataTransmission);
     }
