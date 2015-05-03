@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e94212d0-6a82-4150-9241-8c02bf5ea36a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" afterPath="$PROJECT_DIR$/src/com/interaxon/test/libmuse/DataAnalysis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="deltafocus.iws" />
@@ -470,7 +469,13 @@
       <option name="project" value="LOCAL" />
       <updated>1430693438353</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Incrementing class up to 9 then run step3 to build classifier.">
+      <created>1430693559142</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1430693559142</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -533,7 +538,8 @@
     <MESSAGE value="DataBuffer now creates ArrayList that should contain the values, but not tested. TODO: get DataAnalysis to load data into models. Then need to have ability to store 5 normal + 5 stressed Instances for training." />
     <MESSAGE value="Nothing changed." />
     <MESSAGE value="Updated the weka code so that it can learn based on scores, softof." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the weka code so that it can learn based on scores, softof." />
+    <MESSAGE value="Incrementing class up to 9 then run step3 to build classifier." />
+    <option name="LAST_COMMIT_MESSAGE" value="Incrementing class up to 9 then run step3 to build classifier." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
