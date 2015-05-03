@@ -73,11 +73,11 @@ public class DataAnalysis
         Attribute Attribute2 = new Attribute(“secondNumeric”);
 
         // Declare a nominal attribute along with its values
-        FastVector fvNominalVal = new FastVector(3);
+        /*FastVector fvNominalVal = new FastVector(3);
         fvNominalVal.addElement(“blue”);
         fvNominalVal.addElement(“gray”);
         fvNominalVal.addElement(“black”);
-        Attribute Attribute3 = new Attribute(“aNominal”, fvNominalVal);
+        Attribute Attribute3 = new Attribute(“aNominal”, fvNominalVal);*/
 
         // Declare the class attribute along with its values
         FastVector fvClassVal = new FastVector(2);
